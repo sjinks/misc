@@ -7,6 +7,7 @@ dpkg-statoverride --update --add root root 0700 /etc/cron.daily
 dpkg-statoverride --update --add root root 0700 /etc/cron.hourly
 dpkg-statoverride --update --add root root 0700 /etc/cron.monthly
 dpkg-statoverride --update --add root root 0700 /etc/cron.weekly
+dpkg-statoverride --update --add root root 0700 /etc/cron.yearly
 ```
 
 ---
