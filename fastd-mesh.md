@@ -29,7 +29,9 @@ include peers from "peers";
 [Unit]
 Description=Batman mesh on bat0
 After=fastd@mesh.service
-Wants=fastd@mesh.service
+BindsTo=fastd@mesh.service
+PartOf=fastd@mesh.service
+
 
 [Service]
 Type=oneshot
@@ -49,7 +51,7 @@ ExecStop=/bin/sh -c '\
 '
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=fastd@mesh.service
 ```
 
 ```bash
