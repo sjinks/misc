@@ -32,7 +32,6 @@ After=fastd@mesh.service
 BindsTo=fastd@mesh.service
 PartOf=fastd@mesh.service
 
-
 [Service]
 Type=oneshot
 RemainAfterExit=yes
@@ -56,5 +55,6 @@ WantedBy=fastd@mesh.service
 
 ```bash
 systemctl daemon-reload
+systemctl enable batman-mesh
 systemctl enable --now fastd@mesh
 ```
