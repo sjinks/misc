@@ -58,3 +58,10 @@ systemctl daemon-reload
 systemctl enable batman-mesh
 systemctl enable --now fastd@mesh
 ```
+
+## ufw
+
+```bash
+ufw allow 10000/udp comment 'fastd'
+ufw allow in on bat0 comment 'fastd mesh'
+```
